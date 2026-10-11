@@ -22,6 +22,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -43,7 +44,7 @@
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 24px;
-            padding: 50px;
+            padding: 40px 50px 50px 50px;
             box-shadow: var(--shadow);
             position: relative;
             overflow: hidden;
@@ -57,6 +58,35 @@
             right: 0;
             height: 6px;
             background: linear-gradient(90deg, #2563eb, #9333ea, #db2777);
+        }
+
+        /* 3D Верхнее меню навигации */
+        .nav-bar {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background 0.2s ease, color 0.2s ease;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.05);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-4px) scale(1.05) rotateX(8deg) rotateY(-8deg);
+            box-shadow: 0 12px 20px rgba(37, 99, 235, 0.25);
+            background: var(--accent);
+            color: #fff;
         }
 
         header {
@@ -165,15 +195,15 @@
             background: var(--accent-light);
         }
 
-        /* Блог / Статьи для SEO */
-        .blog-grid {
+        /* Блог и кейсы */
+        .grid-cards {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
             margin-top: 15px;
         }
 
-        .blog-card {
+        .card-item {
             background: #f8fafc;
             border: 1px solid var(--border);
             border-radius: 16px;
@@ -181,26 +211,26 @@
             transition: all 0.3s ease;
         }
 
-        .blog-card:hover {
+        .card-item:hover {
             border-color: var(--accent);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.03);
         }
 
-        .blog-title {
+        .card-title {
             font-size: 1.15rem;
             font-weight: 700;
             color: var(--text-main);
             margin-bottom: 10px;
         }
 
-        .blog-snippet {
+        .card-snippet {
             font-size: 0.98rem;
             color: var(--text-muted);
             margin-bottom: 15px;
         }
 
-        .blog-keywords {
+        .card-tag {
             font-size: 0.85rem;
             color: var(--accent);
             font-weight: 600;
@@ -286,6 +316,7 @@
         @media (max-width: 768px) {
             body { padding: 15px; }
             .container { padding: 25px; }
+            .nav-bar { justify-content: center; }
             header { flex-direction: column; text-align: center; gap: 20px; }
             .header-info h1 { font-size: 1.8rem; }
             .buttons { flex-direction: column; }
@@ -296,6 +327,13 @@
 <body>
 
     <div class="container">
+        <!-- 3D Навигационное меню вверху -->
+        <nav class="nav-bar">
+            <a href="#cases" class="nav-btn">Кейсы</a>
+            <a href="#blog" class="nav-btn">Экспертный блог</a>
+            <a href="#contacts" class="nav-btn">Контакты</a>
+        </nav>
+
         <header>
             <div class="avatar-container">
                 <img src="https://lh3.googleusercontent.com/d/1r_O5GyMUQ3To-b_vc8-36ZaRsZB_oFag=s1000" alt="Олег Вальд">
@@ -324,6 +362,23 @@
             </div>
         </section>
 
+        <!-- Раздел Кейсы -->
+        <section id="cases">
+            <h2>Кейсы и решенные задачи</h2>
+            <div class="grid-cards">
+                <div class="card-item">
+                    <div class="card-title">🎬 Генерация рекламных роликов под ключ</div>
+                    <div class="card-snippet">Создание динамичных коммерческих видео для бренда с использованием Runway, VEO и Kling с полным контролем стиля и мимики персонажей.</div>
+                    <span class="card-tag">Результат: Сокращение бюджета в 4 раза, ускорение в 3 раза</span>
+                </div>
+                <div class="card-item">
+                    <div class="card-title">👤 Разработка постоянных ИИ-персонажей</div>
+                    <div class="card-snippet">Генерация согласованных лиц, локаций и стилей в Midjourney и Stable Diffusion для ведения брендовых соцсетей без съемок.</div>
+                    <span class="card-tag">Результат: Единый визуальный код и рост вовлеченности</span>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h2>Ключевые компетенции</h2>
             <ul>
@@ -336,27 +391,27 @@
             </ul>
         </section>
 
-        <!-- SEO-блок со статьями для бесплатного привлечения клиентов -->
-        <section>
-            <h2>Экспертный блог: статьи для бизнеса</h2>
-            <p>Материалы о том, как нейросети экономят бюджеты и масштабируют продажи.</p>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-title">Как сократить бюджет на видеопроизводство в 4 раза с помощью ИИ</div>
-                    <div class="blog-snippet">Разбор реального опыта коммерческого продакшна: как замена классических съемок на генерацию видео в Runway, VEO и Kling ускоряет запуск рекламных кампаний в 3–5 раз без потери качества.</div>
-                    <span class="blog-keywords">генерация видео Runway, заказать ИИ рекламу</span>
+        <!-- Экспертный блог -->
+        <section id="blog">
+            <h2>Экспертный блог</h2>
+            <p>Статьи для привлечения клиентов и демонстрации экспертизы.</p>
+            <div class="grid-cards">
+                <div class="card-item">
+                    <div class="card-title">Как сократить бюджет на видеопроизводство в 4 раза с помощью ИИ</div>
+                    <div class="card-snippet">Разбор реального опыта коммерческого продакшна: как замена классических съемок на генерацию видео в Runway, VEO и Kling ускоряет запуск рекламных кампаний.</div>
+                    <span class="card-tag">генерация видео Runway • заказать ИИ рекламу</span>
                 </div>
 
-                <div class="blog-card">
-                    <div class="blog-title">Создание ИИ-аватаров и виртуальных персонажей для брендов</div>
-                    <div class="blog-snippet">Почему современному бизнесу выгоднее использовать постоянных сгенерированных персонажей в Midjourney и Stable Diffusion, чем нанимать моделей для каждой новой распаковки или сторис.</div>
-                    <span class="blog-keywords">создание ИИ-аватаров для бизнеса, Midjourney под ключ</span>
+                <div class="card-item">
+                    <div class="card-title">Создание ИИ-аватаров и виртуальных персонажей для брендов</div>
+                    <div class="card-snippet">Почему современному бизнесу выгоднее использовать постоянных сгенерированных персонажей в Midjourney и Stable Diffusion, чем нанимать моделей.</div>
+                    <span class="card-tag">создание ИИ-аватаров • Midjourney под ключ</span>
                 </div>
 
-                <div class="blog-card">
-                    <div class="blog-title">Сценарии и SMM-продвижение через нейросети</div>
-                    <div class="blog-snippet">Как объединить глубокий промпт-инжиниринг, сильные сценарии и автоматизацию контента, чтобы ваши ролики стабильно залетали в рекомендации TikTok и Reels.</div>
-                    <span class="blog-keywords">AI-креатор услуги, SMM продвижение через ИИ</span>
+                <div class="card-item">
+                    <div class="card-title">Сценарии и SMM-продвижение через нейросети</div>
+                    <div class="card-snippet">Как объединить глубокий промпт-инжиниринг, сильные сценарии и автоматизацию контента, чтобы ваши ролики стабильно залетали в рекомендации.</div>
+                    <span class="card-tag">AI-креатор • SMM продвижение через ИИ</span>
                 </div>
             </div>
         </section>
@@ -368,8 +423,8 @@
             </div>
         </section>
 
-        <section>
-            <h2>Портфолио</h2>
+        <section id="contacts">
+            <h2>Портфолио и контакты</h2>
             <p>В портфолио представлены примеры работ под NDA и открытые кейсы.</p>
         </section>
 
