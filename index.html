@@ -106,7 +106,7 @@
         }
 
         .badge-3d:hover {
-            transform: translateY(-5px) scale(1.05) rotateX(10deg) rotateY(-10deg);
+            transform: translateY(-50px) scale(1.05) rotateX(10deg) rotateY(-10deg);
             box-shadow: 0 15px 25px rgba(37, 99, 235, 0.25);
             background: var(--accent);
             color: #fff;
@@ -163,6 +163,50 @@
             border-color: var(--accent);
             color: var(--accent);
             background: var(--accent-light);
+        }
+
+        /* Карточки кейсов */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .case-card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .case-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .case-title {
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .case-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .case-result {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #166534;
+            background: #ecfdf5;
+            padding: 6px 12px;
+            border-radius: 6px;
+            display: inline-block;
         }
 
         ul {
@@ -276,6 +320,29 @@
                 <span class="tool-tag">Kling</span>
                 <span class="tool-tag">Nano Banana</span>
                 <span class="tool-tag">ИИ-аватары</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Примеры решенных задач (Кейсы)</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-title">🎬 Генерация рекламных роликов под ключ</div>
+                    <div class="case-desc">Создание динамичных коммерческих видео для бренда с использованием Runway, VEO и Kling с полным контролем стиля и мимики персонажей.</div>
+                    <div class="case-result">Результат: Сокращение бюджета на продакшн в 4 раза, ускорение запуска в 3 раза.</div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-title">👤 Разработка постоянных ИИ-персонажей</div>
+                    <div class="case-desc">Генерация согласованных лиц, локаций и стилей в Midjourney и Stable Diffusion для ведения брендовых соцсетей без съемок.</div>
+                    <div class="case-result">Результат: Единый визуальный код контента и рост вовлеченности аудитории.</div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-title">📈 Сценарии и SMM-продвижение</div>
+                    <div class="case-desc">Написание увлекательных сценариев, комплексная упаковка контента и массовая генерация роликов для залипательных рилсов и TikTok.</div>
+                    <div class="case-result">Результат: Регулярный поток охватов и выход видео в рекомендации.</div>
+                </div>
             </div>
         </section>
 
