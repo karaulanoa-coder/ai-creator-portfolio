@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Блог AI-креатора: ИИ-видео, аватары, нейросети для рекламы</title>
+    <meta name="description" content="Статьи об ИИ-видео и нейросетях для бизнеса: как заказать рекламу, создать ИИ-аватара, дипфейк и видео без съёмок. Разборы, цены и кейсы AI-креатора.">
+    <meta name="keywords" content="блог ии видео, статьи про нейросети, ии реклама, ии аватар, дипфейк, видеопродакшн статьи">
+    <meta name="author" content="Олег Вальд">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://wald-ai.ru/blog.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Олег Вальд — AI-креатор">
+    <meta property="og:title" content="Блог AI-креатора: ИИ-видео, аватары, нейросети для рекламы">
+    <meta property="og:description" content="Статьи об ИИ-видео и нейросетях для бизнеса: разборы, цены и кейсы.">
+    <meta property="og:url" content="https://wald-ai.ru/blog.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --accent-light: #eff6ff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px 50px 50px 50px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #2563eb, #9333ea, #db2777);
+        }
+
+        .nav-bar {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background 0.2s ease, color 0.2s ease;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.05);
+            cursor: pointer;
+            border: none;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-4px) scale(1.05) rotateX(8deg) rotateY(-8deg);
+            box-shadow: 0 12px 20px rgba(37, 99, 235, 0.25);
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .nav-btn.active { background: var(--accent); color: #fff; }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
+        }
+
+        .lead { color: var(--text-muted); font-size: 1.08rem; margin-bottom: 40px; }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .blog-preview-card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .blog-preview-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+        }
+
+        .blog-preview-card.soon { cursor: default; opacity: 0.7; }
+        .blog-preview-card.soon:hover { transform: none; border-color: var(--border); box-shadow: none; }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .blog-preview-title {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .blog-preview-snippet {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .blog-preview-tag {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+            background: var(--accent-light);
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 45px;
+            padding-top: 35px;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 220px;
+            text-align: center;
+            background: var(--accent);
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: #f8fafc;
+            border-color: var(--text-muted);
+            color: var(--text-main);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 25px; }
+            .nav-bar { justify-content: center; }
+            h1 { font-size: 1.7rem; }
+            .buttons { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://wald-ai.ru/blog.html",
+      "name": "Блог AI-креатора Олега Вальда",
+      "description": "Статьи об ИИ-видео, нейросетях, аватарах и продакшне без съёмок.",
+      "url": "https://wald-ai.ru/blog.html",
+      "inLanguage": "ru-RU",
+      "author": { "@type": "Person", "name": "Олег Вальд", "url": "https://wald-ai.ru/" },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Заказать ИИ-рекламу для бизнеса: как выбрать подрядчика и не слить бюджет",
+          "url": "https://wald-ai.ru/zakaz-ii-reklamy-dlya-biznesa.html",
+          "datePublished": "2026-09-01",
+          "author": { "@type": "Person", "name": "Олег Вальд" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "ИИ-аватары и дипфейки в маркетинге: тренд года или реальная экономия?",
+          "url": "https://wald-ai.ru/ii-avatary-i-dipfejki-v-marketinge.html",
+          "datePublished": "2026-10-16",
+          "author": { "@type": "Person", "name": "Олег Вальд" }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-btn">Главная</a>
+            <a href="index.html#prices" class="nav-btn">Услуги и цены</a>
+            <a href="index.html#cases" class="nav-btn">Кейсы</a>
+            <a href="blog.html" class="nav-btn active">Экспертный блог</a>
+            <a href="index.html#contacts" class="nav-btn">Контакты</a>
+        </nav>
+
+        <h1>Экспертный блог об ИИ-видео и нейросетях</h1>
+        <p class="lead">Разбираю, как нейросети заменяют съёмочную группу, сколько это стоит и как внедрить ИИ-контент в бизнес. Без воды — только то, что я делаю в реальных проектах.</p>
+
+        <div class="grid-cards">
+
+            <a href="ii-avatary-i-dipfejki-v-marketinge.html" class="blog-preview-card">
+                <span class="blog-date">16 октября 2026</span>
+                <div class="blog-preview-title">ИИ-аватары и дипфейки в маркетинге: тренд года или реальная экономия?</div>
+                <div class="blog-preview-snippet">Как цифровой двойник заменяет студию, оператора и модель: сравнение с живой съёмкой по деньгам и срокам, внедрение в воронку и что говорит закон о маркировке ИИ-контента.</div>
+                <span class="blog-preview-tag">ИИ-аватары →</span>
+            </a>
+
+            <a href="zakaz-ii-reklamy-dlya-biznesa.html" class="blog-preview-card">
+                <span class="blog-date">1 сентября 2026</span>
+                <div class="blog-preview-title">Заказать ИИ-рекламу для бизнеса: как выбрать подрядчика и не слить бюджет</div>
+                <div class="blog-preview-snippet">Как AI-видеопродакшн ускоряет запуск рекламы, какие нейросети для этого используются и по каким признакам отличить специалиста от дилетанта.</div>
+                <span class="blog-preview-tag">ИИ-реклама →</span>
+            </a>
+
+            <div class="blog-preview-card soon">
+                <span class="blog-date">Скоро</span>
+                <div class="blog-preview-title">Сколько стоит создать ИИ-аватара для бизнеса</div>
+                <div class="blog-preview-snippet">Из чего складывается цена цифрового двойника: обучение модели, генерация, монтаж, права на использование. Сравнение платформ и реальные вилки бюджетов.</div>
+                <span class="blog-preview-tag">В разработке</span>
+            </div>
+
+            <div class="blog-preview-card soon">
+                <span class="blog-date">Скоро</span>
+                <div class="blog-preview-title">Как записывать видео без камеры: полный гайд для экспертов</div>
+                <div class="blog-preview-snippet">Пошагово: от записи исходника на телефон до готового потока экспертных роликов, которые не отличаются от обычной съёмки.</div>
+                <span class="blog-preview-tag">В разработке</span>
+            </div>
+
+            <div class="blog-preview-card soon">
+                <span class="blog-date">Скоро</span>
+                <div class="blog-preview-title">Сценарии и SMM-продвижение через нейросети</div>
+                <div class="blog-preview-snippet">Как объединить промпт-инжиниринг, сильные сценарии и автоматизацию контента для роста охватов.</div>
+                <span class="blog-preview-tag">В разработке</span>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <a href="https://t.me/olegwald" class="btn" target="_blank" rel="noopener">Заказать видео в Telegram</a>
+            <a href="index.html" class="btn btn-secondary">← Вернуться на главную</a>
+        </div>
+
+    </div>
+</body>
+</html>
