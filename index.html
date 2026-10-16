@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Олег Вальд — Видеомонтажер & AI-Креатор | Услуги ИИ-продакшна</title>
+
+    <!-- ===== ГЛАВНЫЕ ТЕГИ ДЛЯ ПОИСКОВИКОВ ===== -->
+    <title>Олег Вальд — AI-креатор: ИИ-видео и реклама на нейросетях</title>
+    <meta name="description" content="ИИ-видео и реклама на нейросетях: генерация сцен от 500 ₽, ИИ-аватары, дипфейк, монтаж под ключ. Кейсы и портфолио AI-креатора Олега Вальда.">
+    <meta name="keywords" content="ии видео, нейросети для видео, ии аватар, дипфейк, ai креатор, ии продакшн, генерация видео">
+    <meta name="author" content="Олег Вальд">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://wald-ai.ru/">
+
+    <!-- ===== ПРЕВЬЮ ДЛЯ TELEGRAM, ВКОНТАКТЕ, WHATSAPP ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Олег Вальд — AI-креатор">
+    <meta property="og:title" content="Олег Вальд — AI-креатор: ИИ-видео и реклама на нейросетях">
+    <meta property="og:description" content="Генерация сцен от 500 ₽, ИИ-аватары, дипфейк и монтаж под ключ. 50+ проектов с 2023 года.">
+    <meta property="og:url" content="https://wald-ai.ru/">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1r_O5GyMUQ3To-b_vc8-36ZaRsZB_oFag=s1000">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Олег Вальд — AI-креатор: ИИ-видео и реклама на нейросетях">
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1r_O5GyMUQ3To-b_vc8-36ZaRsZB_oFag=s1000">
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -92,6 +112,11 @@
             color: #fff;
         }
 
+        .nav-btn.active {
+            background: var(--accent);
+            color: #fff;
+        }
+
         header {
             display: flex;
             align-items: center;
@@ -124,6 +149,12 @@
             color: var(--text-main);
             margin-bottom: 8px;
             letter-spacing: -0.5px;
+        }
+
+        .header-sub {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
         }
 
         .badge-3d {
@@ -244,6 +275,83 @@
             display: inline-block;
         }
 
+        /* ===== ТАБЛИЦА ЦЕН ===== */
+        .table-scroll {
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+            min-width: 520px;
+        }
+
+        .price-table th {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .price-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+            color: var(--text-main);
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table td:last-child {
+            font-weight: 800;
+            color: var(--accent);
+            white-space: nowrap;
+            text-align: right;
+            font-size: 1.05rem;
+        }
+
+        .price-table .service-name {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .price-table .service-desc {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .price-note {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-top: 14px;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
+
+        /* ===== БЛОК БИЗНЕС-РЕЗУЛЬТАТА ===== */
+        .results-box {
+            background: var(--accent-light);
+            border-left: 4px solid var(--accent);
+            border-radius: 10px;
+            padding: 20px 22px;
+            color: #1e3a8a;
+            font-size: 1.02rem;
+            margin-top: 15px;
+        }
+
         /* Кнопка перехода на Telegram */
         .tg-watch-btn {
             display: inline-flex;
@@ -332,18 +440,87 @@
             .header-info h1 { font-size: 1.8rem; }
             .buttons { flex-direction: column; }
             .btn { width: 100%; }
+            .price-table { font-size: 0.92rem; }
+            .price-table th, .price-table td { padding: 12px; }
         }
     </style>
+
+    <!-- Описание сайта для поисковиков. На вид страницы не влияет. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://wald-ai.ru/#person",
+          "name": "Олег Вальд",
+          "jobTitle": "AI-креатор",
+          "url": "https://wald-ai.ru/",
+          "sameAs": [
+            "https://t.me/wald_video",
+            "https://t.me/olegwald",
+            "https://www.tiktok.com/@olegwald"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://wald-ai.ru/#service",
+          "name": "AI-креатор Олег Вальд — ИИ-видео и реклама на нейросетях",
+          "url": "https://wald-ai.ru/",
+          "image": "https://lh3.googleusercontent.com/d/1r_O5GyMUQ3To-b_vc8-36ZaRsZB_oFag=s1000",
+          "priceRange": "от 500 ₽",
+          "areaServed": { "@type": "Country", "name": "Россия" },
+          "founder": { "@id": "https://wald-ai.ru/#person" },
+          "serviceType": [
+            "Генерация видео нейросетями",
+            "Создание ИИ-аватаров",
+            "Дипфейк на заказ",
+            "Видеопродакшн под ключ"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Услуги ИИ-видеопродакшна",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Генерация одной сцены до 10 секунд" },
+                "priceSpecification": { "@type": "PriceSpecification", "minPrice": "500", "priceCurrency": "RUB" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Ролик под ключ до 30 секунд" },
+                "priceSpecification": { "@type": "PriceSpecification", "minPrice": "7000", "priceCurrency": "RUB" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Создание ИИ-аватара (цифрового двойника)" },
+                "priceSpecification": { "@type": "PriceSpecification", "minPrice": "15000", "priceCurrency": "RUB" }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://wald-ai.ru/#website",
+          "url": "https://wald-ai.ru/",
+          "name": "Олег Вальд — AI-креатор",
+          "inLanguage": "ru-RU",
+          "publisher": { "@id": "https://wald-ai.ru/#person" }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
     <div class="container">
-        <!-- 3D Навигационное меню вверху -->
+        <!-- Навигационное меню вверху -->
         <nav class="nav-bar">
             <button class="nav-btn" onclick="showHome()">Главная</button>
+            <button class="nav-btn" onclick="scrollToSection('prices')">Услуги и цены</button>
             <button class="nav-btn" onclick="scrollToSection('cases')">Кейсы</button>
             <button class="nav-btn" onclick="showVideoPortfolio()">Видео-портфолио</button>
-            <button class="nav-btn" onclick="showBlogList()">Экспертный блог</button>
+            <a href="blog.html" class="nav-btn">Экспертный блог</a>
             <button class="nav-btn" onclick="scrollToSection('contacts')">Контакты</button>
         </nav>
 
@@ -351,11 +528,12 @@
         <div id="home-page">
             <header>
                 <div class="avatar-container">
-                    <img src="https://lh3.googleusercontent.com/d/1r_O5GyMUQ3To-b_vc8-36ZaRsZB_oFag=s1000" alt="Олег Вальд">
+                    <img src="https://lh3.googleusercontent.com/d/1r_O5GyMUQ3To-b_vc8-36ZaRsZB_oFag=s1000" alt="Олег Вальд — AI-креатор, ИИ-видео и реклама на нейросетях">
                 </div>
                 <div class="header-info">
-                    <h1>Олег Вальд</h1>
-                    <div class="badge-3d">Видеомонтажер & AI-Креатор</div>
+                    <h1>Олег Вальд — AI-креатор</h1>
+                    <p class="header-sub">ИИ-видео, реклама и аватары на нейросетях</p>
+                    <div class="badge-3d">Видеопродакшн под ключ · 50+ проектов</div>
                 </div>
             </header>
 
@@ -365,7 +543,7 @@
             </section>
 
             <section>
-                <h2>Топовые нейросети и стек</h2>
+                <h2>Нейросети для видео: мой стек</h2>
                 <div class="tools-grid">
                     <span class="tool-tag">Midjourney</span>
                     <span class="tool-tag">Stable Diffusion</span>
@@ -374,11 +552,77 @@
                     <span class="tool-tag">Kling</span>
                     <span class="tool-tag">Nano Banana</span>
                     <span class="tool-tag">ИИ-аватары</span>
+                    <span class="tool-tag">HeyGen</span>
                 </div>
             </section>
 
+            <!-- ===== НОВЫЙ РАЗДЕЛ: УСЛУГИ И ЦЕНЫ ===== -->
+            <section id="prices">
+                <h2>Услуги и цены на ИИ-видео</h2>
+                <p>Стоимость считается по сценам: одна генерация — до 10 секунд готового видео. Чем больше сцен в проекте, тем ниже цена за штуку.</p>
+
+                <div class="table-scroll">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Услуга</th>
+                                <th>Цена</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="service-name">Генерация одной сцены</span>
+                                    <span class="service-desc">До 10 секунд. Промпт-инжиниринг, генерация, чистка артефактов, цветокоррекция.</span>
+                                </td>
+                                <td>от 500 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="service-name">Пакет 5 сцен</span>
+                                    <span class="service-desc">До 50 секунд видео. Единый стиль и один персонаж во всех сценах.</span>
+                                </td>
+                                <td>от 2 200 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="service-name">Пакет 10 сцен</span>
+                                    <span class="service-desc">Около 1,5 минуты видео. Консистентность героя, одежды и локаций от кадра к кадру.</span>
+                                </td>
+                                <td>от 4 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="service-name">Ролик под ключ, до 30 секунд</span>
+                                    <span class="service-desc">Сценарий, 10–12 сцен, монтаж, динамичные субтитры, музыка и саунд-дизайн.</span>
+                                </td>
+                                <td>от 7 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="service-name">ИИ-аватар / цифровой двойник</span>
+                                    <span class="service-desc">Обучение модели на вашем исходнике + 5 готовых роликов до 60 секунд.</span>
+                                </td>
+                                <td>от 15 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="service-name">Локализация ролика на другой язык</span>
+                                    <span class="service-desc">Перевод, клонирование вашего голоса, точный липсинк под новую озвучку.</span>
+                                </td>
+                                <td>от 3 000 ₽</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="price-note">
+                    Цены — ориентир для планирования бюджета. Итоговая стоимость зависит от сложности сцен, количества правок и сроков. Точный расчёт присылаю после короткого брифа в Telegram — обычно в течение дня.
+                </p>
+            </section>
+
             <section id="cases">
-                <h2>Кейсы и решенные задачи</h2>
+                <h2>Кейсы: ИИ-видео и реклама для бизнеса</h2>
                 <div class="grid-cards">
                     <div class="blog-preview-card" style="cursor: default;">
                         <div class="blog-preview-title">🎬 Генерация рекламных роликов под ключ</div>
@@ -418,8 +662,9 @@
             </section>
 
             <div class="buttons">
-                <a href="https://t.me/wald_video" class="btn" target="_blank">Telegram-канал (Кейсы)</a>
-                <a href="https://www.tiktok.com/@olegwald?_r=1&_t=ZG-99EXfieEQcr" class="btn btn-secondary" target="_blank">TikTok (Трендовые видео)</a>
+                <a href="https://t.me/olegwald" class="btn" target="_blank" rel="noopener">Заказать видео в Telegram</a>
+                <a href="https://t.me/wald_video" class="btn btn-secondary" target="_blank" rel="noopener">Telegram-канал (Кейсы)</a>
+                <a href="https://www.tiktok.com/@olegwald" class="btn btn-secondary" target="_blank" rel="noopener">TikTok (Трендовые видео)</a>
             </div>
         </div>
 
@@ -440,7 +685,7 @@
                         </div>
                         <span class="blog-preview-tag">Итог: залетевшие ролики в Inst и ВК</span>
                         <br>
-                        <a href="https://t.me/wald_video/71" target="_blank" class="tg-watch-btn">
+                        <a href="https://t.me/wald_video/71" target="_blank" rel="noopener" class="tg-watch-btn">
                             <i class="fab fa-telegram-plane"></i> Смотреть видео в Telegram
                         </a>
                     </div>
@@ -453,7 +698,7 @@
                         </div>
                         <span class="blog-preview-tag">Результат: живая подача и экономия бюджета</span>
                         <br>
-                        <a href="https://t.me/wald_video/75" target="_blank" class="tg-watch-btn">
+                        <a href="https://t.me/wald_video/75" target="_blank" rel="noopener" class="tg-watch-btn">
                             <i class="fab fa-telegram-plane"></i> Смотреть видео в Telegram
                         </a>
                     </div>
@@ -463,7 +708,7 @@
                         <div class="blog-preview-snippet">Динамичный промо-ролик с современным визуальным рядом и саунд-дизайном для продвижения музыкального сервиса.</div>
                         <span class="blog-preview-tag">Рекламный креатив</span>
                         <br>
-                        <a href="https://t.me/wald_video/69" target="_blank" class="tg-watch-btn">
+                        <a href="https://t.me/wald_video/69" target="_blank" rel="noopener" class="tg-watch-btn">
                             <i class="fab fa-telegram-plane"></i> Смотреть видео в Telegram
                         </a>
                     </div>
@@ -473,7 +718,7 @@
                         <div class="blog-preview-snippet">Создание рекламного креатива под ключ: проработка сценария, генерация визуальных образов и динамичный монтаж.</div>
                         <span class="blog-preview-tag">Коммерческий продакшн</span>
                         <br>
-                        <a href="https://t.me/wald_video/70" target="_blank" class="tg-watch-btn">
+                        <a href="https://t.me/wald_video/70" target="_blank" rel="noopener" class="tg-watch-btn">
                             <i class="fab fa-telegram-plane"></i> Смотреть видео в Telegram
                         </a>
                     </div>
@@ -483,43 +728,12 @@
                         <div class="blog-preview-snippet">Профессиональный дипфейк. Реалистичная замена лиц и интеграция любого персонажа на любую заданную тему.</div>
                         <span class="blog-preview-tag">AI-технологии</span>
                         <br>
-                        <a href="https://t.me/wald_video/66" target="_blank" class="tg-watch-btn">
+                        <a href="https://t.me/wald_video/66" target="_blank" rel="noopener" class="tg-watch-btn">
                             <i class="fab fa-telegram-plane"></i> Смотреть видео в Telegram
                         </a>
                     </div>
                 </div>
 
-            </section>
-        </div>
-
-        <!-- СТРАНИЦА СПИСКА СТАТЕЙ БЛОГА -->
-        <div id="blog-list-page" style="display: none;">
-            <button class="back-btn" onclick="showHome()">← На главную</button>
-            <section>
-                <h2>Экспертный блог</h2>
-                <p>Полезные материалы о том, как нейросети оптимизируют бюджеты и масштабируют бизнес.</p>
-                <div class="grid-cards">
-                    <!-- Ссылка на отдельную SEO-статью 1 -->
-                    <a href="zakaz-ii-reklamy-dlya-biznesa.html" class="blog-preview-card">
-                        <div class="blog-preview-title">Заказать ИИ-рекламу для бизнеса: как выбрать подрядчика и не слить бюджет</div>
-                        <div class="blog-preview-snippet">Разбор реального опыта коммерческого продакшна: как замена классических съемок на генерацию видео в Runway, VEO и Kling ускоряет запуск...</div>
-                        <span class="blog-preview-tag">Читать статью →</span>
-                    </a>
-
-                    <!-- Заглушки для будущих статей (пока ведут на заглушку или главную) -->
-              <!-- Статья 2 -->
-                    <a href="ii-avatary-i-dipfejki-v-marketinge.html" class="blog-preview-card">
-                        <div class="blog-preview-title">ИИ-аватары и дипфейки в маркетинге: тренд года или реальная экономия?</div>
-                        <div class="blog-preview-snippet">Разбираю, как цифровой двойник заменяет студию, оператора и модель, сколько это экономит и как внедрить ИИ-продакшн в свою воронку...</div>
-                        <span class="blog-preview-tag">Читать статью →</span>
-                    </a>
-
-                    <div class="blog-preview-card" style="cursor: default; opacity: 0.7;">
-                        <div class="blog-preview-title">Сценарии и SMM-продвижение через нейросети (Скоро)</div>
-                        <div class="blog-preview-snippet">Как объединить глубокий промпт-инжиниринг, сильные сценарии и автоматизацию контента для роста охватов...</div>
-                        <span class="blog-preview-tag">В разработке</span>
-                    </div>
-                </div>
             </section>
         </div>
 
@@ -530,7 +744,6 @@
         function hideAll() {
             document.getElementById('home-page').style.display = 'none';
             document.getElementById('video-portfolio-page').style.display = 'none';
-            document.getElementById('blog-list-page').style.display = 'none';
         }
 
         function showHome() {
@@ -542,12 +755,6 @@
         function showVideoPortfolio() {
             hideAll();
             document.getElementById('video-portfolio-page').style.display = 'block';
-            window.scrollTo(0, 0);
-        }
-
-        function showBlogList() {
-            hideAll();
-            document.getElementById('blog-list-page').style.display = 'block';
             window.scrollTo(0, 0);
         }
 
