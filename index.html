@@ -204,7 +204,7 @@
             margin-top: 15px;
         }
 
-        /* Карточки статей (превью) */
+        /* Карточки статей и видео */
         .blog-preview-card {
             background: #f8fafc;
             border: 1px solid var(--border);
@@ -241,6 +241,36 @@
             padding: 4px 10px;
             border-radius: 6px;
             display: inline-block;
+        }
+
+        /* Стили для видео-портфолио */
+        .video-category-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+            margin-bottom: 15px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         /* Страница отдельной статьи */
@@ -377,6 +407,7 @@
         <nav class="nav-bar">
             <button class="nav-btn" onclick="showHome()">Главная</button>
             <button class="nav-btn" onclick="scrollToSection('cases')">Кейсы</button>
+            <button class="nav-btn" onclick="showVideoPortfolio()">Видео-портфолио</button>
             <button class="nav-btn" onclick="showBlogList()">Экспертный блог</button>
             <button class="nav-btn" onclick="scrollToSection('contacts')">Контакты</button>
         </nav>
@@ -455,6 +486,53 @@
                 <a href="https://t.me/wald_video" class="btn" target="_blank">Telegram-канал (Кейсы)</a>
                 <a href="https://www.tiktok.com/@olegwald?_r=1&_t=ZG-99EXfieEQcr" class="btn btn-secondary" target="_blank">TikTok (Трендовые видео)</a>
             </div>
+        </div>
+
+        <!-- СТРАНИЦА ВИДЕО-ПОРТФОЛИО -->
+        <div id="video-portfolio-page" style="display: none;">
+            <button class="back-btn" onclick="showHome()">← На главную</button>
+            <section>
+                <h2>Видео-портфолио</h2>
+                <p>Примеры моих работ, разделенные по направлениям. Вы можете запустить видео прямо на странице.</p>
+
+                <!-- Категория 1: Видео экспертов -->
+                <div class="video-category-title">🎙️ Видео экспертов</div>
+                <div class="grid-cards">
+                    <div class="blog-preview-card">
+                        <div class="blog-preview-title">Пример экспертного ролика</div>
+                        <!-- Сюда вставляется плеер с Google Диска или YouTube -->
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/УКАЖИ_ЗДЕСЬ_ID_ВИДЕО_С_ДИСКА/preview" allowfullscreen></iframe>
+                        </div>
+                        <div class="blog-preview-snippet">Краткое описание задачи: создание экспертного контента с идеальным синхроном и ИИ-обработкой.</div>
+                    </div>
+                </div>
+
+                <!-- Категория 2: Рекламные креативы -->
+                <div class="video-category-title">🚀 Рекламные креативы</div>
+                <div class="grid-cards">
+                    <div class="blog-preview-card">
+                        <div class="blog-preview-title">Пример рекламного креатива</div>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/УКАЖИ_ЗДЕСЬ_ID_ВИДЕО_С_ДИСКА/preview" allowfullscreen></iframe>
+                        </div>
+                        <div class="blog-preview-snippet">Генерация коммерческого видеоряда в Runway, VEO и Kling под ключ.</div>
+                    </div>
+                </div>
+
+                <!-- Категория 3: Дипфейки -->
+                <div class="video-category-title">👥 Дипфейки и ИИ-аватары</div>
+                <div class="grid-cards">
+                    <div class="blog-preview-card">
+                        <div class="blog-preview-title">Пример работы с дипфейком / ИИ-аватаром</div>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/УКАЖИ_ЗДЕСЬ_ID_ВИДЕО_С_ДИСКА/preview" allowfullscreen></iframe>
+                        </div>
+                        <div class="blog-preview-snippet">Создание цифровых двойников и реалистичная замена лиц для брендов.</div>
+                    </div>
+                </div>
+
+            </section>
         </div>
 
         <!-- СТРАНИЦА СПИСКА СТАТЕЙ БЛОГА -->
@@ -536,6 +614,7 @@
     <script>
         function hideAll() {
             document.getElementById('home-page').style.display = 'none';
+            document.getElementById('video-portfolio-page').style.display = 'none';
             document.getElementById('blog-list-page').style.display = 'none';
             document.querySelectorAll('.article-full').forEach(el => el.style.display = 'none');
         }
@@ -543,6 +622,12 @@
         function showHome() {
             hideAll();
             document.getElementById('home-page').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        function showVideoPortfolio() {
+            hideAll();
+            document.getElementById('video-portfolio-page').style.display = 'block';
             window.scrollTo(0, 0);
         }
 
