@@ -211,6 +211,8 @@
             border-radius: 16px;
             padding: 24px;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
         }
 
         .blog-preview-card:hover {
@@ -263,11 +265,6 @@
             transform: translateY(-2px);
         }
 
-        /* Страница отдельной статьи */
-        .article-full {
-            display: none;
-        }
-
         .back-btn {
             background: var(--accent-light);
             color: var(--accent);
@@ -283,58 +280,6 @@
         .back-btn:hover {
             background: var(--accent);
             color: #fff;
-        }
-
-        .article-title-full {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-main);
-            margin-bottom: 25px;
-            line-height: 1.3;
-        }
-
-        .article-body h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-
-        .article-body p {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 12px;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
-
-        ul li::before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: 800;
-            position: absolute;
-            left: 0;
-        }
-
-        .results-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-            border: 1px solid #bbf7d0;
-            border-left: 4px solid #22c55e;
-            padding: 20px;
-            border-radius: 12px;
-            color: #166534;
-            font-weight: 500;
-            font-size: 1.05rem;
         }
 
         .buttons {
@@ -435,12 +380,12 @@
             <section id="cases">
                 <h2>Кейсы и решенные задачи</h2>
                 <div class="grid-cards">
-                    <div class="blog-preview-card">
+                    <div class="blog-preview-card" style="cursor: default;">
                         <div class="blog-preview-title">🎬 Генерация рекламных роликов под ключ</div>
                         <div class="blog-preview-snippet">Создание динамичных коммерческих видео для бренда с использованием Runway, VEO и Kling с полным контролем стиля и мимики персонажей.</div>
                         <span class="blog-preview-tag">Результат: Сокращение бюджета в 4 раза, ускорение в 3 раза</span>
                     </div>
-                    <div class="blog-preview-card">
+                    <div class="blog-preview-card" style="cursor: default;">
                         <div class="blog-preview-title">👤 Разработка постоянных ИИ-персонажей</div>
                         <div class="blog-preview-snippet">Генерация согласованных лиц, локаций и стилей в Midjourney и Stable Diffusion для ведения брендовых соцсетей без съемок.</div>
                         <span class="blog-preview-tag">Результат: Единый визуальный код и рост вовлеченности</span>
@@ -485,10 +430,8 @@
                 <h2>Видео-портфолио</h2>
                 <p>Примеры моих работ с детальным описанием задач. Смотрите ролики напрямую в Telegram-канале.</p>
 
-                <!-- Элементы портфолио на основе переданных постов -->
                 <div class="grid-cards">
-                    <!-- Проект 1 -->
-                    <div class="blog-preview-card">
+                    <div class="blog-preview-card" style="cursor: default;">
                         <div class="blog-preview-title">🎬 Нарезка EDIT-ов для соцсетей сервиса Frendi.AI</div>
                         <div class="blog-preview-snippet">
                             ✅ Динамичный монтаж, переходы, саунд-дизайн.<br>
@@ -502,8 +445,7 @@
                         </a>
                     </div>
 
-                    <!-- Проект 2 -->
-                    <div class="blog-preview-card">
+                    <div class="blog-preview-card" style="cursor: default;">
                         <div class="blog-preview-title">🎬 Экспертный контент без съемок и студий</div>
                         <div class="blog-preview-snippet">
                             Сгенерировал и смонтировал серию реалистичных AI-аватаров в HeyGen для медицинской ниши.<br><br>
@@ -516,8 +458,7 @@
                         </a>
                     </div>
 
-                    <!-- Проект 3 -->
-                    <div class="blog-preview-card">
+                    <div class="blog-preview-card" style="cursor: default;">
                         <div class="blog-preview-title">🚀 Ролик для рекламы музыкального бота</div>
                         <div class="blog-preview-snippet">Динамичный промо-ролик с современным визуальным рядом и саунд-дизайном для продвижения музыкального сервиса.</div>
                         <span class="blog-preview-tag">Рекламный креатив</span>
@@ -527,8 +468,7 @@
                         </a>
                     </div>
 
-                    <!-- Проект 4 -->
-                    <div class="blog-preview-card">
+                    <div class="blog-preview-card" style="cursor: default;">
                         <div class="blog-preview-title">💊 Реклама мультивитаминного комплекса</div>
                         <div class="blog-preview-snippet">Создание рекламного креатива под ключ: проработка сценария, генерация визуальных образов и динамичный монтаж.</div>
                         <span class="blog-preview-tag">Коммерческий продакшн</span>
@@ -538,8 +478,7 @@
                         </a>
                     </div>
 
-                    <!-- Проект 5 -->
-                    <div class="blog-preview-card">
+                    <div class="blog-preview-card" style="cursor: default;">
                         <div class="blog-preview-title">👥 Дипфейк и работа с персонажами</div>
                         <div class="blog-preview-snippet">Профессиональный дипфейк. Реалистичная замена лиц и интеграция любого персонажа на любую заданную тему.</div>
                         <span class="blog-preview-tag">AI-технологии</span>
@@ -560,70 +499,27 @@
                 <h2>Экспертный блог</h2>
                 <p>Полезные материалы о том, как нейросети оптимизируют бюджеты и масштабируют бизнес.</p>
                 <div class="grid-cards">
-                    <div class="blog-preview-card" onclick="openArticle('article1')">
-                        <div class="blog-preview-title">Как сократить бюджет на видеопроизводство в 4 раза с помощью ИИ</div>
+                    <!-- Ссылка на отдельную SEO-статью 1 -->
+                    <a href="zakaz-ii-reklamy-dlya-biznesa.html" class="blog-preview-card">
+                        <div class="blog-preview-title">Заказать ИИ-рекламу для бизнеса: как выбрать подрядчика и не слить бюджет</div>
                         <div class="blog-preview-snippet">Разбор реального опыта коммерческого продакшна: как замена классических съемок на генерацию видео в Runway, VEO и Kling ускоряет запуск...</div>
                         <span class="blog-preview-tag">Читать статью →</span>
-                    </div>
+                    </a>
 
-                    <div class="blog-preview-card" onclick="openArticle('article2')">
-                        <div class="blog-preview-title">Создание ИИ-аватаров и виртуальных персонажей для брендов</div>
+                    <!-- Заглушки для будущих статей (пока ведут на заглушку или главную) -->
+                    <div class="blog-preview-card" style="cursor: default; opacity: 0.7;">
+                        <div class="blog-preview-title">Создание ИИ-аватаров и виртуальных персонажей для брендов (Скоро)</div>
                         <div class="blog-preview-snippet">Почему современному бизнесу выгоднее использовать постоянных сгенерированных персонажей в Midjourney и Stable Diffusion...</div>
-                        <span class="blog-preview-tag">Читать статью →</span>
+                        <span class="blog-preview-tag">В разработке</span>
                     </div>
 
-                    <div class="blog-preview-card" onclick="openArticle('article3')">
-                        <div class="blog-preview-title">Сценарии и SMM-продвижение через нейросети: как залетать в рекомендации</div>
+                    <div class="blog-preview-card" style="cursor: default; opacity: 0.7;">
+                        <div class="blog-preview-title">Сценарии и SMM-продвижение через нейросети (Скоро)</div>
                         <div class="blog-preview-snippet">Как объединить глубокий промпт-инжиниринг, сильные сценарии и автоматизацию контента для роста охватов...</div>
-                        <span class="blog-preview-tag">Читать статью →</span>
+                        <span class="blog-preview-tag">В разработке</span>
                     </div>
                 </div>
             </section>
-        </div>
-
-        <!-- СТРАНИЦА СТАТЬИ 1 -->
-        <div id="article1" class="article-full">
-            <button class="back-btn" onclick="showBlogList()">← К списку статей</button>
-            <h1 class="article-title-full">Как сократить бюджет на видеопроизводство в 4 раза с помощью ИИ</h1>
-            <div class="article-body">
-                <p>Классический коммерческий продакшн сегодня — это огромная статья расходов для бизнеса. Аренда съемочной студии, работа съемочной группы, кастинг актеров, световое оборудование и долгая постобработка съедают недели времени и сотни тысяч рублей. Когда компании требуется регулярно выпускать свежий рекламный контент, традиционные методы упираются в финансовый тупик.</p>
-                
-                <h3>Революция нейросетей в коммерческом видео</h3>
-                <p>Именно поэтому современный бизнес всё чаще решает заказать ИИ рекламу у профильных специалистов. Использование передовых генеративных инструментов, таких как генерация видео в Runway, VEO и Kling, позволяет полностью переосмыслить подход к созданию роликов. Промпт-инжиниринг дает точный контроль над стилем, движением камеры и физикой объектов, исключая необходимость дорогостоящих натурных съемок.</p>
-
-                <h3>Экономика процесса: цифры и факты</h3>
-                <p>На практике интеграция ИИ в продакшн сокращает бюджеты на производство в 3–4 раза при сохранении премиального качества картинки. Скорость выпуска готовых видеороликов вырастает в 3–5 раз, что критически важно для динамичных рекламных кампаний в интернет-среде.</p>
-            </div>
-        </div>
-
-        <!-- СТРАНИЦА СТАТЬИ 2 -->
-        <div id="article2" class="article-full">
-            <button class="back-btn" onclick="showBlogList()">← К списку статей</button>
-            <h1 class="article-title-full">Создание ИИ-аватаров и виртуальных персонажей для брендов в 2026 году</h1>
-            <div class="article-body">
-                <p>Современный маркетинг строится на доверии к лицу бренда. Однако нанимать постоянную модель для каждого рекламного ролика, сторис или презентации — дорого и непрактично. Решением этой задачи стало создание ИИ-аватаров для бизнеса и постоянных виртуальных амбассадоров.</p>
-
-                <h3>Как достигается консистентность персонажа</h3>
-                <p>Главная сложность ранних нейросетей заключалась в том, что лицо персонажа менялось от генерации к генерации. Сегодня благодаря глубокой настройке моделей в Midjourney и Stable Diffusion эта проблема полностью решена. Мы создаем уникального цифрового героя с фиксированной внешностью, эмоциями и стилем одежды, который «живет» в любых локациях.</p>
-
-                <h3>Где применять цифровых героев</h3>
-                <p>Виртуальные персонажи идеально подходят для ведения корпоративных соцсетей, демонстрации товаров в динамике и создания персонализированных видеообращений. Заказ услуги Midjourney под ключ позволяет бренду выстроить уникальный и узнаваемый визуальный стиль навсегда.</p>
-            </div>
-        </div>
-
-        <!-- СТРАНИЦА СТАТЬИ 3 -->
-        <div id="article3" class="article-full">
-            <button class="back-btn" onclick="showBlogList()">← К списку статей</button>
-            <h1 class="article-title-full">Сценарии и SMM-продвижение через нейросети: как залетать в рекомендации</h1>
-            <div class="article-body">
-                <p>Создать красивое видео с помощью искусственного интеллекта — это лишь половина дела. Чтобы контент приносил продажи, он должен решать маркетинговые задачи и вовлекать зрителя с первых секунд. Именно поэтому качественные AI-креатор услуги включают в себя не просто генерацию пикселей, а комплексную работу со сценариями и стратегией.</p>
-
-                <h3>Анатомия вирусного ролика</h3>
-                <p>Успешное SMM продвижение через ИИ строится на синергии глубокого копирайтинга, цепляющего хука (крючка) в первые 3 секунды и трендового визуального ряда. Нейросети позволяют мгновенно генерировать десятки вариаций под разные форматы площадок (TikTok, Reels, Shorts), тестируя гипотезы без лишних затрат.</p>
-
-                <h3>Комплексный подход под ключ</h3>
-                <p>Передавая контент и продвижение специалисту, вы получаете работающий инструмент генерации лидов, высвобождая время для ключевых бизнес-процессов компании.</p>
-            </div>
         </div>
 
     </div>
@@ -634,7 +530,6 @@
             document.getElementById('home-page').style.display = 'none';
             document.getElementById('video-portfolio-page').style.display = 'none';
             document.getElementById('blog-list-page').style.display = 'none';
-            document.querySelectorAll('.article-full').forEach(el => el.style.display = 'none');
         }
 
         function showHome() {
@@ -652,12 +547,6 @@
         function showBlogList() {
             hideAll();
             document.getElementById('blog-list-page').style.display = 'block';
-            window.scrollTo(0, 0);
-        }
-
-        function openArticle(articleId) {
-            hideAll();
-            document.getElementById(articleId).style.display = 'block';
             window.scrollTo(0, 0);
         }
 
