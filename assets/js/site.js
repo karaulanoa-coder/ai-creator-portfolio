@@ -11,6 +11,14 @@
     }
   });
 })();
+// Цели Яндекс Метрики: клики по контактам и соцсетям
+(function(){
+  var goals = [['t.me/olegwald','tg_order'],['t.me/wald_video','tg_channel'],['instagram.com','instagram'],['tiktok.com','tiktok']];
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]'); if(!a || typeof ym !== 'function') return;
+    for(var i=0;i<goals.length;i++){ if(a.href.indexOf(goals[i][0]) !== -1){ ym(114471578,'reachGoal',goals[i][1]); break; } }
+  });
+})();
 // Закрывает мобильное меню после перехода по якорю
 (function(){
   var t = document.getElementById('nav-toggle');
