@@ -19,6 +19,16 @@
     for(var i=0;i<goals.length;i++){ if(a.href.indexOf(goals[i][0]) !== -1){ ym(114471578,'reachGoal',goals[i][1]); break; } }
   });
 })();
+// Ролик в кадре на первом экране запускается по клику
+(function(){
+  document.querySelectorAll('[data-tg-frame]').forEach(function(f){
+    var b=f.querySelector('.play'); if(!b) return;
+    b.addEventListener('click', function(){
+      var i=document.createElement('iframe'); i.src='https://t.me/wald_video/'+f.getAttribute('data-tg-frame')+'?embed=1';
+      i.title='Ролик из Telegram-канала'; i.setAttribute('allow','autoplay; fullscreen'); f.innerHTML=''; f.style.background='#fff'; f.appendChild(i);
+    });
+  });
+})();
 // Закрывает мобильное меню после перехода по якорю
 (function(){
   var t = document.getElementById('nav-toggle');
