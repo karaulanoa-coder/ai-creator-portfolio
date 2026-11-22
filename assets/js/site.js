@@ -13,7 +13,7 @@
   'vec2 q=vec2(fbm(p*1.6+t*.05),fbm(p*1.6-t*.04+3.1));',
   'vec2 w=vec2(fbm(p*1.3+2.*q+vec2(1.7,9.2)+t*.06),fbm(p*1.3+2.*q+vec2(8.3,2.8)-t*.05));',
   'float f=fbm(p*1.2+2.4*w)+.25*exp(-d*3.);',
-  'vec3 bg=vec3(.027,.035,.055);vec3 blue=vec3(.18,.45,1.);vec3 orng=vec3(1.,.47,.18);',
+  'vec3 bg=vec3(.008,.10,.19);vec3 blue=vec3(.043,.38,.643);vec3 orng=vec3(.40,.64,.82);',
   'vec3 col=mix(bg,blue,smoothstep(.35,.85,f)*.85);col=mix(col,orng,smoothstep(.62,1.05,f+w.x*.25)*.9);',
   'col*=.55+.45*smoothstep(0.,.9,uv.x);col+=.03*h(gl_FragCoord.xy+t);',
   'gl_FragColor=vec4(col,1.);}'].join('\n');
